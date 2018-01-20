@@ -1,6 +1,6 @@
 #!/bin/sh
 
-make entrypoint
+make -f /usr/src/app/Makefile entrypoint
 
 # This will exec the CMD from your Dockerfile, i.e. "npm start"
 exec "$@"
