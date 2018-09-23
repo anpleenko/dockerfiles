@@ -1,5 +1,7 @@
 FROM nginx:stable-alpine
 
-RUN rm -rf /etc/nginx/*
+ARG nginx_config_dir=nginx
 
-COPY nginx/* /etc/nginx
+RUN rm -rf /etc/nginx
+
+COPY ${nginx_config_dir} /etc
